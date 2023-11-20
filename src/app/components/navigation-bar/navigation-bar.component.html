@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <!-- Logo -->
+  <img [src]="petShop().logo" alt="Pet Store Logo" class="logo" />
+
+  <!-- Pet Store Name -->
+  <span class="store-name">{{ petShop().name }}</span>
+
+  <!-- Navigation Links -->
+  <div class="spacer"></div>
+  <a mat-button routerLink="about" routerLinkActive="active">О Нама</a>
+  <a
+    mat-button
+    routerLink="products"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Производи</a
+  >
+  <a
+    mat-button
+    routerLink="users"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Корисници</a
+  >
+
+  <!-- Sign In/Log In Buttons -->
+  <span class="spacer"></span>
+  <a
+    mat-icon-button
+    routerLink="cart"
+    routerLinkActive="cart-active"
+    class="shopping_cart_icon"
+  >
+    <mat-icon
+      [matBadge]="cartItems().length"
+      matBadgeColor="warn"
+      [matBadgeHidden]="!cartItems().length"
+      >shopping_cart</mat-icon
+    >
+  </a>
+  <button mat-raised-button (click)="onLogin()">Пријави се</button>
+</mat-toolbar>

@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="productFormGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>Назив</mat-label>
+      <input matInput type="text" formControlName="name" />
+      <mat-error *ngIf="isFieldInvalid('name')">{{
+        getErrorMessage("name")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Врста</mat-label>
+      <input matInput type="text" formControlName="type" />
+      <mat-error *ngIf="isFieldInvalid('type')">{{
+        getErrorMessage("type")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Слика</mat-label>
+      <input matInput type="url" formControlName="img" />
+      <mat-error *ngIf="isFieldInvalid('img')">{{
+        getErrorMessage("img")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Кратак опис</mat-label>
+      <input matInput type="text" formControlName="shortDescription" />
+      <mat-error *ngIf="isFieldInvalid('shortDescription')">{{
+        getErrorMessage("shortDescription")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Детаљан опис</mat-label>
+      <input matInput type="text" formControlName="longDescription" />
+      <mat-error *ngIf="isFieldInvalid('longDescription')">{{
+        getErrorMessage("longDescription")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Цена</mat-label>
+      <input matInput type="number" formControlName="price" />
+      <mat-error *ngIf="isFieldInvalid('price')">{{
+        getErrorMessage("price")
+      }}</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>Откажи</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+    [disabled]="!isFormValid()"
+  >
+    Потврди
+  </button>
+</mat-dialog-actions>

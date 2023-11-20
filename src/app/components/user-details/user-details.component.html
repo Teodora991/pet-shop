@@ -1,0 +1,23 @@
+<div class="label-box">
+  <h2>{{ userData.lastName }}, {{ userData.firstName }}</h2>
+  <div>
+    <button mat-raised-button (click)="editUser()">Измени</button>
+  </div>
+</div>
+<div class="items-container user-details">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title
+        >{{ userData.lastName }}, {{ userData.firstName }}</mat-card-title
+      >
+      <mat-card-subtitle>{{ userData.username }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p><span class="label">Датум рођења:</span> {{ userData.dateOfBirth }}</p>
+      <mat-divider></mat-divider>
+      <p><span class="label">Адреса:</span> {{ userData.address }}</p>
+      <p><span class="label">E-пошта:</span> {{ userData.email }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

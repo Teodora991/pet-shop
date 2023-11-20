@@ -1,0 +1,26 @@
+<div class="label-box">
+  <h2>Корпа</h2>
+  <div class="account-link">
+    <p>Укупно у корпи: {{ productService.total() | formatPrice }}</p>
+  </div>
+</div>
+
+<div class="items-container">
+  <mat-grid-list cols="4" rowHeight="1:1.2">
+    @for (product of productService.cartItems(); track product.id) {
+    <mat-grid-tile>
+      <app-product-item-summary
+        class="card"
+        [product]="product"
+      ></app-product-item-summary
+    ></mat-grid-tile>
+    } @empty {
+    <div class="account-link">
+      <p>Ваша корпа је празна...</p>
+      <button mat-raised-button color="primary" [routerLink]="['/products']">
+        Пронађи производе
+      </button>
+    </div>
+    }
+  </mat-grid-list>
+</div>

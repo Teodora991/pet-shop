@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>Пријава корисника</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="loginFormGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>Корисничко име</mat-label>
+      <input matInput formControlName="username" />
+      <mat-error *ngIf="isFieldInvalid('username')">{{
+        getErrorMessage("username")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Шифра</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        [type]="hide ? 'password' : 'text'"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error *ngIf="isFieldInvalid('password')">{{
+        getErrorMessage("password")
+      }}</mat-error>
+    </mat-form-field>
+  </form>
+
+  <div class="account-link">
+    <p>
+      Немаш налог? Креирај га
+      <a (click)="signUp()"><span class="link">овде</span></a
+      >.
+    </p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>Откажи</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+    [disabled]="!isFormValid()"
+  >
+    Потврди
+  </button>
+</mat-dialog-actions>

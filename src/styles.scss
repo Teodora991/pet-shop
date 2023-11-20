@@ -1,0 +1,192 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.link {
+  color: #673ab7;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-group {
+  button {
+    margin-left: 10px;
+  }
+}
+
+.full-width {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.mat-grid-list.flex-container {
+  padding: 0 !important;
+  height: 100%;
+  & > div:first-child {
+    height: 100%;
+  }
+}
+
+mat-form-field {
+  margin-bottom: 10px;
+  width: 100%;
+
+  &:first-of-type {
+    margin-top: 10px;
+  }
+
+  &.readonly-field {
+    background-color: transparent;
+    .mdc-text-field--filled.mdc-text-field--disabled {
+      background-color: transparent;
+    }
+
+    mat-label {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
+
+.card {
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.5);
+  .mat-mdc-card-header {
+    background-color: #4527a0;
+    color: #ede7f6;
+  }
+  .mat-mdc-card-subtitle {
+    color: #ede7f6;
+  }
+
+  .mdc-card__actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    // background-color: #ede7f6;
+  }
+}
+
+.items-container {
+  margin: 0;
+  height: 70%;
+  overflow-y: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.label-box {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-header-cell {
+  background-color: #b39ddb !important;
+  color: #333;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: #651fff;
+  font-weight: 600;
+  color: #311b92;
+  & .table-action {
+    visibility: visible;
+  }
+}
+
+.account-link {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.03125em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.table-action {
+  visibility: hidden;
+}
+
+.item-details {
+  height: 100%;
+  width: 80%;
+
+  .mat-mdc-card-header {
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .price {
+    color: #b388ff;
+    font-size: 24px;
+    margin: 12px;
+  }
+}
+
+.product-img-card {
+  height: 100%;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .label {
+    font-size: 10px;
+    margin: 0;
+  }
+  .progress-bar {
+    width: 70%;
+  }
+}
+
+.user-details {
+  width: 60%;
+  margin: 0 auto;
+
+  .mat-mdc-card-header {
+    padding-bottom: 20px;
+    background-color: #651fff;
+    color: white;
+  }
+
+  .mat-mdc-card-subtitle {
+    color: #ede7f6;
+  }
+
+  .mat-mdc-card-content {
+    padding: 16px;
+  }
+
+  .mat-divider {
+    margin: 5px 0;
+  }
+
+  .label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #311b92;
+  }
+}

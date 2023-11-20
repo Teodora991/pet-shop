@@ -1,0 +1,62 @@
+<button
+  class="star"
+  mat-icon-button
+  *ngFor="let ratingId of [0, 1, 2, 3, 4]; index as i"
+  (click)="onClick(i)"
+>
+  <mat-icon>
+    {{ showIcon(i) }}
+  </mat-icon>
+</button>
+
+<p>Просек {{ averageRating }} (укупно {{ ratings.length }} оцена)</p>
+
+<div class="progress-bar-container">
+  <p class="label">Оцена 1 ({{ countRatings(1) }})</p>
+  <mat-progress-bar
+    class="progress-bar"
+    mode="determinate"
+    [value]="getRatingPercentage(1)"
+    color="primary"
+  ></mat-progress-bar>
+</div>
+
+<div class="progress-bar-container">
+  <p class="label">Оцена 2 ({{ countRatings(2) }})</p>
+  <mat-progress-bar
+    class="progress-bar"
+    mode="determinate"
+    [value]="getRatingPercentage(2)"
+    color="primary"
+  ></mat-progress-bar>
+</div>
+
+<div class="progress-bar-container">
+  <p class="label">Оцена 3 ({{ countRatings(3) }})</p>
+  <mat-progress-bar
+    class="progress-bar"
+    mode="determinate"
+    [value]="getRatingPercentage(3)"
+    color="primary"
+  ></mat-progress-bar>
+</div>
+
+<div class="progress-bar-container">
+  <p class="label">Оцена 4 ({{ countRatings(4) }})</p>
+  <mat-progress-bar
+    class="progress-bar"
+    mode="determinate"
+    [value]="getRatingPercentage(4)"
+    color="primary"
+  ></mat-progress-bar>
+</div>
+
+<div class="progress-bar-container">
+  <p class="label">Оцена 5 ({{ countRatings(5) }})</p>
+  <mat-progress-bar
+    class="progress-bar"
+    mode="determinate"
+    [value]="getRatingPercentage(5)"
+    color="primary"
+  ></mat-progress-bar>
+</div>

@@ -1,0 +1,29 @@
+<div class="label-box">
+  <h2>
+    Добродошли у {{ petShop().name }} – вашу дестинацију за квалитетну бригу о
+    љубимцима.
+  </h2>
+  <button mat-raised-button (click)="editStore()">Измени</button>
+</div>
+<div class="items-container">
+  <mat-dialog-content class="mat-typography about">
+    <div class="section">
+      <h3>Наша прича</h3>
+      <p>
+        Основани {{ petShop().yearOfOpening }}, у {{ petShop().name }} делимо
+        љубав према животињама.
+      </p>
+      <p>
+        Наша мисија је побринути се да ваши љубимци воде срећан и здрав живот.
+        Пружамо пажљиво одабране производе и стручне савете како бисмо
+        унапредили добробит ваших љубимаца.
+      </p>
+    </div>
+    <div class="section">
+      <h3>Контакт</h3>
+      <p>Посетите нас данас на адреси {{ petShop().address }}</p>
+      <p>Захваљујемо се на указаном поверењу!</p>
+      <p>Тим {{ petShop().name }}</p>
+    </div>
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,148 @@
+<div class="stepper-container">
+  <h2 mat-dialog-title>{{ data.title }}</h2>
+  <mat-stepper orientation="horizontal" #stepper [linear]="true">
+    <mat-step [stepControl]="accountFormGroup">
+      <form [formGroup]="accountFormGroup">
+        <ng-template matStepLabel>Подаци о налогу</ng-template>
+        <mat-form-field appearance="outline">
+          <mat-label>Корисничко име</mat-label>
+          <input type="text" matInput formControlName="username" />
+          <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'username')">{{
+            getErrorMessage(accountFormGroup, "username")
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Шифра</mat-label>
+          <input
+            matInput
+            formControlName="password"
+            [type]="hidePassword ? 'password' : 'text'"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hidePassword = !hidePassword"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidePassword"
+          >
+            <mat-icon>{{
+              hidePassword ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+          <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'password')">{{
+            getErrorMessage(accountFormGroup, "password")
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field *ngIf="!data.item" appearance="outline" class="">
+          <mat-label>Потврда Шифре</mat-label>
+          <input
+            matInput
+            formControlName="confirmPassword"
+            [type]="hideConfirmPassword ? 'password' : 'text'"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hideConfirmPassword = !hideConfirmPassword"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hideConfirmPassword"
+          >
+            <mat-icon>{{
+              hideConfirmPassword ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+          <mat-error
+            *ngIf="isFieldInvalid(accountFormGroup, 'confirmPassword')"
+            >{{
+              getErrorMessage(accountFormGroup, "confirmPassword")
+            }}</mat-error
+          >
+        </mat-form-field>
+        <mat-dialog-actions align="end">
+          <button mat-raised-button mat-dialog-close>Откажи</button>
+          <button
+            mat-raised-button
+            matStepperNext
+            [disabled]="!isFormValid(accountFormGroup)"
+          >
+            Следеће
+          </button>
+        </mat-dialog-actions>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="userFormGroup">
+      <form [formGroup]="userFormGroup">
+        <ng-template matStepLabel>Подаци о кориснику</ng-template>
+        <mat-form-field appearance="outline">
+          <mat-label>Име</mat-label>
+          <input matInput type="text" formControlName="firstName" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'firstName')">{{
+            getErrorMessage(userFormGroup, "firstName")
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Презиме</mat-label>
+          <input matInput type="text" formControlName="lastName" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'lastName')">{{
+            getErrorMessage(userFormGroup, "lastName")
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Адреса</mat-label>
+          <input matInput type="text" formControlName="address" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'address')">{{
+            getErrorMessage(userFormGroup, "address")
+          }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Адреса електронске поште</mat-label>
+          <input matInput type="email" formControlName="email" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'email')">{{
+            getErrorMessage(userFormGroup, "email")
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Датум рођења</mat-label>
+          <input matInput type="date" formControlName="dateOfBirth" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'dateOfBirth')">{{
+            getErrorMessage(userFormGroup, "dateOfBirth")
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Број Телефона</mat-label>
+          <input matInput type="tel" formControlName="phoneNumber" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'phoneNumber')">{{
+            getErrorMessage(userFormGroup, "phoneNumber")
+          }}</mat-error>
+        </mat-form-field>
+        <mat-dialog-actions align="end">
+          <button mat-raised-button matStepperPrevious>Претходно</button>
+          <button
+            mat-raised-button
+            type="button"
+            color="primary"
+            (click)="onSubmit()"
+            [disabled]="!isFormValid(userFormGroup)"
+          >
+            Потврди
+          </button>
+        </mat-dialog-actions>
+      </form>
+    </mat-step>
+  </mat-stepper>
+
+  <div
+    class="account-link"
+    *ngIf="this.data.creator === 'user' && !this.data.item"
+  >
+    <p>
+      Већ имаш налог? Пријави се
+      <a (click)="login()"><span class="link">овде</span></a
+      >.
+    </p>
+  </div>
+</div>

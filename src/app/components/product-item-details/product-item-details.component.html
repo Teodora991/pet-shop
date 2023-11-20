@@ -1,0 +1,55 @@
+<div class="label-box">
+  <h2>{{ productData.name }}</h2>
+  <div class="button-group">
+    <button mat-raised-button (click)="editProduct()">Измени</button>
+    <button mat-raised-button (click)="onDelete()">Избриши</button>
+  </div>
+</div>
+<div class="items-container">
+  <mat-grid-list cols="2" rowHeight="100%">
+    <mat-grid-tile
+      ><mat-card class="product-img-card">
+        <img
+          mat-card-image
+          [src]="productData.img"
+          alt="{{ productData.longDescription }}"
+        />
+        <mat-card-content>
+          <p class="account-link">{{ productData.longDescription }}</p>
+        </mat-card-content></mat-card
+      ></mat-grid-tile
+    >
+    <mat-grid-tile
+      ><mat-card class="item-details">
+        <mat-card-header>
+          <mat-card-title>{{ productData.name }}</mat-card-title>
+          <mat-card-subtitle>{{ productData.type }}</mat-card-subtitle>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              (click)="addToCart()"
+              *ngIf="!productData.addedToCart"
+              color="primary"
+            >
+              <mat-icon>add_shopping_cart</mat-icon>Додај
+            </button>
+            <button mat-raised-button *ngIf="productData.addedToCart">
+              Додат у корпу
+            </button>
+          </mat-card-actions>
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          <p class="price">{{ productData.price | formatPrice }}</p>
+          <mat-divider></mat-divider>
+
+          <app-star-rating
+            [averageRating]="productData.averageRating"
+            [ratings]="productData.ratings"
+            (ratingUpdated)="updateProductRating($event)"
+          ></app-star-rating>
+        </mat-card-content> </mat-card
+    ></mat-grid-tile>
+  </mat-grid-list>
+</div>
