@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { PetShopService, DialogService, ProductService } from '../../services';
 import { RouterModule } from '@angular/router';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -17,6 +18,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatButtonModule,
     RouterModule,
     MatBadgeModule,
+    MatMenuModule,
   ],
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.scss',

@@ -148,6 +148,26 @@ mat-form-field {
   height: 100%;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hamburger-btn {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    visibility: visible;
+  }
+}
+
 .progress-bar-container {
   display: flex;
   flex-direction: row;

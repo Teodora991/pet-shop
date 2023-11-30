@@ -7,21 +7,32 @@
 
   <!-- Navigation Links -->
   <div class="spacer"></div>
-  <a mat-button routerLink="about" routerLinkActive="active">О Нама</a>
-  <a
-    mat-button
-    routerLink="products"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-    >Производи</a
-  >
-  <a
-    mat-button
-    routerLink="users"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-    >Корисници</a
-  >
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger-btn">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="about">О Нама</button>
+    <button mat-menu-item routerLink="products">Производи</button>
+    <button mat-menu-item routerLink="users">Корисници</button>
+  </mat-menu>
+
+  <nav>
+    <a mat-button routerLink="about" routerLinkActive="active">О Нама</a>
+    <a
+      mat-button
+      routerLink="products"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Производи</a
+    >
+    <a
+      mat-button
+      routerLink="users"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Корисници</a
+    >
+  </nav>
 
   <!-- Sign In/Log In Buttons -->
   <span class="spacer"></span>
