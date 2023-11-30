@@ -14,7 +14,10 @@
     </mat-card-header>
 
     <mat-card-content>
-      <p><span class="label">Датум рођења:</span> {{ userData.dateOfBirth }}</p>
+      <p>
+        <span class="label">Датум рођења:</span>
+        {{ userData.dateOfBirth | date : "MM/dd/yyyy" }}
+      </p>
       <mat-divider></mat-divider>
       <p><span class="label">Адреса:</span> {{ userData.address }}</p>
       <p><span class="label">E-пошта:</span> {{ userData.email }}</p>

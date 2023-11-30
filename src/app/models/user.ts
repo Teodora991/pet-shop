@@ -4,7 +4,7 @@ export interface UserSummary {
   email: string;
   firstName: string;
   lastName: string;
-  dateOfBirth?: Date;
+  dateOfBirth?: string;
   address: string;
   phoneNumber: string;
 }
@@ -16,7 +16,7 @@ export class User implements UserSummary {
   email: string;
   firstName: string;
   lastName: string;
-  dateOfBirth?: Date;
+  dateOfBirth?: string;
   address: string;
   phoneNumber: string;
 
@@ -28,7 +28,7 @@ export class User implements UserSummary {
       email?: string;
       firstName?: string;
       lastName?: string;
-      dateOfBirth?: Date;
+      dateOfBirth?: string;
       address?: string;
       phoneNumber?: string;
     } = {}
