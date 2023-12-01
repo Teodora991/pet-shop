@@ -51,7 +51,7 @@ export class ProductEditorComponent {
     this.productFormGroup = this.fb.group({
       name: [this.product.name, [Validators.required]],
       type: [this.product.type, [Validators.required]],
-      img: [this.product.img, [Validators.required]],
+      img: [this.product.images[0], [Validators.required]],
       shortDescription: [this.product.shortDescription, [Validators.required]],
       longDescription: [this.product.longDescription, [Validators.required]],
       price: [this.product.price, [Validators.required, Validators.min(0)]],

@@ -9,7 +9,10 @@ export class ProductService {
     new Product({
       id: 1,
       name: 'Pet Food',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Healthy pet food',
       longDescription:
         'Nutritious and delicious pet food for your furry friend.',
@@ -22,7 +25,10 @@ export class ProductService {
     new Product({
       id: 2,
       name: 'Pet Toy',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Interactive Pet Toy',
       longDescription: 'Keep your pet entertained with this interactive toy.',
       price: 5.99,
@@ -34,7 +40,10 @@ export class ProductService {
     new Product({
       id: 3,
       name: 'Pet Bed',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Comfortable Pet Bed',
       longDescription: 'Provide your pet with a cozy place to rest and sleep.',
       price: 19.99,
@@ -46,7 +55,10 @@ export class ProductService {
     new Product({
       id: 4,
       name: 'Pet Grooming Kit',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Grooming Kit for Pets',
       longDescription:
         'Essential grooming tools for keeping your pet clean and healthy.',
@@ -59,7 +71,10 @@ export class ProductService {
     new Product({
       id: 5,
       name: 'Pet Collar',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Stylish Pet Collar',
       longDescription:
         'Add a touch of style to your pet with this fashionable collar.',
@@ -72,7 +87,11 @@ export class ProductService {
     new Product({
       id: 6,
       name: 'Pet Leash',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.oddoigracke.rs/kategorije/53/Plisane-zivotinje-1.jpg',
+        'https://www.aksa.rs/files/thumbs/files/images/slike_proizvoda/thumbs_350/A066162_350_350px.jpg',
+        'https://mamibebe-c1c3.kxcdn.com/wp-content/uploads/2023/02/HO2678-580x580.jpg',
+      ],
       shortDescription: 'Durable Pet Leash',
       longDescription:
         'A strong and durable leash for walking your pet with confidence.',
@@ -85,7 +104,12 @@ export class ProductService {
     new Product({
       id: 7,
       name: 'Pet Treats',
-      img: 'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      images: [
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+        'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
+      ],
       shortDescription: 'Delicious Pet Treats',
       longDescription: 'Tasty treats to reward and spoil your pet.',
       price: 7.99,

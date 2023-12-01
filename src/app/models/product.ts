@@ -1,7 +1,7 @@
 export interface ProductSummary {
   id: number;
   name: string;
-  img: string;
+  images: string[];
   shortDescription: string;
   longDescription: string;
   price: number;
@@ -14,7 +14,7 @@ export interface ProductSummary {
 export class Product implements ProductSummary {
   id: number;
   name: string;
-  img: string;
+  images: string[];
   shortDescription: string;
   longDescription: string;
   price: number;
@@ -27,7 +27,7 @@ export class Product implements ProductSummary {
     options: {
       id?: number;
       name?: string;
-      img?: string;
+      images?: string[];
       shortDescription?: string;
       longDescription?: string;
       price?: number;
@@ -39,7 +39,7 @@ export class Product implements ProductSummary {
   ) {
     this.id = options.id || Math.random();
     this.name = options.name || '';
-    this.img = options.img || '';
+    this.images = options.images || [];
     this.shortDescription = options.shortDescription || '';
     this.longDescription = options.longDescription || '';
     this.price = options.price || 0;

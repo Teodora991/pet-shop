@@ -8,17 +8,8 @@
 <div class="items-container">
   <mat-grid-list cols="2" rowHeight="100%">
     <mat-grid-tile
-      ><mat-card class="product-img-card">
-        <img
-          mat-card-image
-          [src]="productData.img"
-          alt="{{ productData.longDescription }}"
-        />
-        <mat-card-content>
-          <p class="account-link">{{ productData.longDescription }}</p>
-        </mat-card-content></mat-card
-      ></mat-grid-tile
-    >
+      ><app-carousel [urls]="productData.images"></app-carousel
+    ></mat-grid-tile>
     <mat-grid-tile
       ><mat-card class="item-details">
         <mat-card-header>

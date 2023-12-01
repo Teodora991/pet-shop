@@ -210,3 +210,21 @@ nav {
     color: #311b92;
   }
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.img-style {
+  margin: 10px auto;
+  height: 320px;
+  width: 400px;
+}
+
+@media (max-width: 992) {
+  .img-style {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}

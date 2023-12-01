@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { FormatPricePipe } from '../../pipes/format-price.pipe';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { CarouselComponent } from '../../carousel/carousel.component';
 
 @Component({
   selector: 'app-product-item-details',
@@ -24,6 +25,7 @@ import { StarRatingComponent } from '../star-rating/star-rating.component';
     MatIconModule,
     FormatPricePipe,
     StarRatingComponent,
+    CarouselComponent,
   ],
   templateUrl: './product-item-details.component.html',
   styleUrl: './product-item-details.component.scss',
