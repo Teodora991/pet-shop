@@ -39,13 +39,14 @@ export class StoreEditorComponent {
     private petShopService: PetShopService
   ) {
     this.storeFormGroup = this.fb.group({
-      name: [this.petShopService.petShop().name, [Validators.required]],
-      yearOfOpening: [
-        this.petShopService.petShop().yearOfOpening,
+      naziv: [this.petShopService.petShop().naziv, [Validators.required]],
+      godinaOtvaranja: [
+        this.petShopService.petShop().godinaOtvaranja,
         [Validators.required],
       ],
-      address: [
-        this.petShopService.petShop().address,
+      telefon: [this.petShopService.petShop().telefon, [Validators.required]],
+      adresa: [
+        this.petShopService.petShop().adresa,
         [Validators.required, addressFormatValidator],
       ],
       logo: [this.petShopService.petShop().logo, [Validators.required]],

@@ -3,23 +3,30 @@
   <form [formGroup]="storeFormGroup">
     <mat-form-field appearance="outline">
       <mat-label>Naziv</mat-label>
-      <input matInput type="text" formControlName="name" />
-      <mat-error *ngIf="isFieldInvalid('name')">{{
-        getErrorMessage("name")
+      <input matInput type="text" formControlName="naziv" />
+      <mat-error *ngIf="isFieldInvalid('naziv')">{{
+        getErrorMessage("naziv")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Godina otvaranja</mat-label>
-      <input matInput type="number" formControlName="yearOfOpening" />
-      <mat-error *ngIf="isFieldInvalid('yearOfOpening')">{{
-        getErrorMessage("yearOfOpening")
+      <input matInput type="number" formControlName="godinaOtvaranja" />
+      <mat-error *ngIf="isFieldInvalid('godinaOtvaranja')">{{
+        getErrorMessage("godinaOtvaranja")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Sedište</mat-label>
-      <input type="text" matInput formControlName="address" />
-      <mat-error *ngIf="isFieldInvalid('address')">{{
-        getErrorMessage("address")
+      <input type="text" matInput formControlName="adresa" />
+      <mat-error *ngIf="isFieldInvalid('adresa')">{{
+        getErrorMessage("adresa")
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefon</mat-label>
+      <input type="text" matInput formControlName="telefon" />
+      <mat-error *ngIf="isFieldInvalid('telefon')">{{
+        getErrorMessage("telefon")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">

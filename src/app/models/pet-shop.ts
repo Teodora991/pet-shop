@@ -2,34 +2,38 @@ import { Product } from './product';
 
 export interface PetShopSummary {
   id: number;
-  name: string;
+  naziv: string;
   logo: string;
-  address: string;
-  yearOfOpening: number;
-  products: Product[];
+  adresa: string;
+  godinaOtvaranja: string;
+  proizvodi: Product[];
+  telefon: string;
 }
 
 export class PetShop implements PetShopSummary {
   id: number;
-  name: string;
+  naziv: string;
   logo: string;
-  address: string;
-  yearOfOpening: number;
-  products: Product[];
+  adresa: string;
+  godinaOtvaranja: string;
+  proizvodi: Product[];
+  telefon: string;
 
   constructor(
     id: number,
-    name: string,
+    naziv: string,
     logo: string,
-    address: string,
-    yearOfOpening: number,
-    products: Product[]
+    adresa: string,
+    godinaOtvaranja: string,
+    proizvodi: Product[],
+    telefon: string
   ) {
     this.id = id;
-    this.name = name;
+    this.naziv = naziv;
     this.logo = logo;
-    this.address = address;
-    this.yearOfOpening = yearOfOpening;
-    this.products = products;
+    this.adresa = adresa;
+    this.godinaOtvaranja = godinaOtvaranja;
+    this.proizvodi = proizvodi;
+    this.telefon = telefon;
   }
 }

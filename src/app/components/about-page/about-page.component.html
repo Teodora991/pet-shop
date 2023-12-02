@@ -1,6 +1,6 @@
 <div class="label-box">
   <h2>
-    Dobrodošli u {{ petShop().name }} – vašu destinaciju za kvalitetnu brigu o
+    Dobrodošli u {{ petShop().naziv }} – vašu destinaciju za kvalitetnu brigu o
     ljubimcima.
   </h2>
   <button mat-raised-button (click)="editStore()">Izmeni</button>
@@ -10,8 +10,8 @@
     <div class="section">
       <h3>Naša priča</h3>
       <p>
-        Osnovani {{ petShop().yearOfOpening }}, u {{ petShop().name }} delimo
-        ljubav prema životinjama.
+        Osnovani <span class="link">{{ petShop().godinaOtvaranja }}</span
+        >, u {{ petShop().naziv }} delimo ljubav prema životinjama.
       </p>
       <p>
         Naša misija je pobrinuti se da vaši ljubimci vode srećan i zdrav život.
@@ -21,9 +21,15 @@
     </div>
     <div class="section">
       <h3>Kontakt</h3>
-      <p>Posetite nas danas na adresi {{ petShop().address }}</p>
+      <p>
+        Posetite nas danas na adresi
+        <span class="link">{{ petShop().adresa }}</span> ili nas kontaktirajte
+        na broj telefona <span class="link">{{ petShop().telefon }}</span>
+      </p>
       <p>Zahvaljujemo se na ukazanom poverenju!</p>
-      <p>Tim {{ petShop().name }}</p>
+      <p>
+        Tim <span class="link">{{ petShop().naziv }}</span>
+      </p>
     </div>
   </mat-dialog-content>
 </div>

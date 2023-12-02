@@ -10,9 +10,10 @@ export class PetShopService {
     1,
     'Magic Paw',
     './assets/images/logo.png',
-    '456 Oak Street, Petland',
-    2018,
-    this.productService.products()
+    'Trg Pavla Stojkovića 12, Nis, 18000',
+    '2001',
+    this.productService.products(),
+    '067-5555-555'
   );
   petShop = signal<PetShop>(this.mockData);
   constructor(private productService: ProductService) {}

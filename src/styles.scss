@@ -171,10 +171,13 @@ mat-form-field {
   letter-spacing: 0.03125em;
   color: rgba(0, 0, 0, 0.6);
   .link {
-    color: #7e57c2;
-    font-weight: 600;
     cursor: pointer;
   }
+}
+
+.link {
+  color: #7e57c2;
+  font-weight: 600;
 }
 
 .user-details {
