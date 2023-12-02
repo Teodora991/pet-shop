@@ -7,17 +7,17 @@
 <div class="row">
   <div class="side">
     <div class="box">
-      <app-carousel [urls]="productData.images"></app-carousel>
+      <app-carousel [urls]="productData.slike"></app-carousel>
       <div class="add-button">
         <button
           mat-raised-button
           (click)="addToCart()"
-          *ngIf="!productData.addedToCart"
+          *ngIf="!productData.uKorpi"
           color="primary"
         >
           <mat-icon>add_shopping_cart</mat-icon>Dodaj u korpu
         </button>
-        <button mat-raised-button *ngIf="productData.addedToCart">
+        <button mat-raised-button *ngIf="productData.uKorpi">
           Dodat u korpu
         </button>
       </div>
@@ -25,17 +25,17 @@
   </div>
   <div class="main">
     <div class="article-number">Broj Artikla: {{ productData.id }}</div>
-    <div class="title">{{ productData.name.toUpperCase() }}</div>
-    <p class="price">{{ productData.price }} RSD</p>
+    <div class="title">{{ productData.naziv.toUpperCase() }}</div>
+    <p class="price">{{ productData.cena }} RSD</p>
     <p>
-      {{ productData.longDescription }}
+      {{ productData.detaljanOpis }}
     </p>
     <hr />
-    <div>Tip proizvoda: {{ productData.type }}</div>
+    <div>Tip proizvoda: {{ productData.tip }}</div>
     <hr />
     <app-star-rating
-      [averageRating]="productData.averageRating"
-      [ratings]="productData.ratings"
+      [averageRating]="productData.prosecnaOcena"
+      [ratings]="productData.ocene"
       (ratingUpdated)="updateProductRating($event)"
     ></app-star-rating>
   </div>

@@ -1,13 +1,15 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  border: 2px solid #7e57c2;
 }
 
 .side {
   flex: 0 0 auto;
   min-width: 300px;
   background-color: white;
-  border: 2px solid #7e57c2;
+  border-right: 2px solid #7e57c2;
 }
 
 .contact {

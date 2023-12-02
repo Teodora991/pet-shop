@@ -1,30 +1,26 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-title>{{ product.naziv }}</mat-card-title>
     <mat-card-subtitle
-      >{{ product.price }} RSD</mat-card-subtitle
+      >{{ product.cena }} RSD</mat-card-subtitle
     > </mat-card-header
   ><br />
-  <img [src]="product.images[0]" alt="product.name" />
+  <img [src]="product.slike[0]" alt="product.name" />
   <mat-card-content>
     <br />
-    <p>{{ product.shortDescription }}</p>
+    <p>{{ product.kratakOpis }}</p>
   </mat-card-content>
   <mat-card-actions>
     <a mat-button (click)="getProductDetails()">Više...</a>
     <button
       mat-raised-button
       (click)="addToCart()"
-      *ngIf="!product.addedToCart"
+      *ngIf="!product.uKorpi"
       color="primary"
     >
       <mat-icon>add_shopping_cart</mat-icon>Dodaj
     </button>
-    <button
-      mat-raised-button
-      (click)="removeFromCart()"
-      *ngIf="product.addedToCart"
-    >
+    <button mat-raised-button (click)="removeFromCart()" *ngIf="product.uKorpi">
       <mat-icon>remove_shopping_cart</mat-icon>Ukloni
     </button>
   </mat-card-actions>

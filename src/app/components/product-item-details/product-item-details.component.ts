@@ -65,7 +65,7 @@ export class ProductItemDetailsComponent implements OnDestroy {
   }
 
   addToCart() {
-    if (!this.productData.addedToCart)
+    if (!this.productData.uKorpi)
       this.productService.addProductToCart(this.productData.id);
     this.productData =
       this.productService.getProductById(this.productData.id) || new Product();

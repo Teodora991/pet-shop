@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DialogData } from '../../models/dialog-data';
 import { Product } from '../../models';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-product-editor',
@@ -31,6 +32,7 @@ import { Product } from '../../models';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
+    MatSelectModule,
   ],
   templateUrl: './product-editor.component.html',
   styleUrl: './product-editor.component.scss',
@@ -48,12 +50,12 @@ export class ProductEditorComponent {
     this.product = data.item || new Product();
     this.title = data.title || 'Izmena podataka o proizvodu';
     this.productFormGroup = this.fb.group({
-      name: [this.product.name, [Validators.required]],
-      type: [this.product.type, [Validators.required]],
-      img: [this.product.images[0], [Validators.required]],
-      shortDescription: [this.product.shortDescription, [Validators.required]],
-      longDescription: [this.product.longDescription, [Validators.required]],
-      price: [this.product.price, [Validators.required, Validators.min(0)]],
+      naziv: [this.product.naziv, [Validators.required]],
+      tip: [this.product.tip, [Validators.required]],
+      slike: [this.product.slike.join(', '), [Validators.required]],
+      kratakOpis: [this.product.kratakOpis, [Validators.required]],
+      detaljanOpis: [this.product.detaljanOpis, [Validators.required]],
+      cena: [this.product.cena, [Validators.required, Validators.min(0)]],
     });
   }
 
@@ -81,10 +83,13 @@ export class ProductEditorComponent {
   onSubmit() {
     if (this.productFormGroup.valid) {
       const otherData: Partial<Product> = {
-        addedToCart: this.product.addedToCart,
+        uKorpi: this.product.uKorpi,
         id: this.product.id,
-        averageRating: this.product.averageRating,
-        ratings: this.product.ratings,
+        prosecnaOcena: this.product.prosecnaOcena,
+        ocene: this.product.ocene,
+        slike: this.productFormGroup.value.slike
+          .split(',')
+          .map((img: string) => img.trim()),
       };
       this.dialogRef.close(
         Object.assign({}, this.productFormGroup.value, otherData)

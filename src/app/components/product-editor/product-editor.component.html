@@ -3,44 +3,55 @@
   <form [formGroup]="productFormGroup">
     <mat-form-field appearance="outline">
       <mat-label>Naziv</mat-label>
-      <input matInput type="text" formControlName="name" />
-      <mat-error *ngIf="isFieldInvalid('name')">{{
-        getErrorMessage("name")
+      <input matInput type="text" formControlName="naziv" />
+      <mat-error *ngIf="isFieldInvalid('naziv')">{{
+        getErrorMessage("naziv")
       }}</mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="outline">
       <mat-label>Vrsta</mat-label>
-      <input matInput type="text" formControlName="type" />
-      <mat-error *ngIf="isFieldInvalid('type')">{{
-        getErrorMessage("type")
+      <mat-select matSelect formControlName="tip">
+        <mat-option value="Hrana za pse">Hrana za pse</mat-option>
+        <mat-option value="Hrana za macke">Hrana za macke</mat-option>
+        <mat-option value="igracke">Igracke</mat-option>
+        <mat-option value="transporteri">Transporteri</mat-option>
+        <mat-option value="poslastice">Poslastice</mat-option>
+      </mat-select>
+      <mat-error *ngIf="isFieldInvalid('tip')">{{
+        getErrorMessage("tip")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Slika</mat-label>
-      <input matInput type="url" formControlName="img" />
-      <mat-error *ngIf="isFieldInvalid('img')">{{
-        getErrorMessage("img")
+      <mat-label>Slike</mat-label>
+      <textarea matInput formControlName="slike"></textarea>
+      <mat-hint align="start"
+        >URL slike (razdvojeno zarezom, npr. url1, url2)</mat-hint
+      >
+      <mat-error *ngIf="isFieldInvalid('slike')">{{
+        getErrorMessage("slike")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Kratak opis</mat-label>
-      <input matInput type="text" formControlName="shortDescription" />
-      <mat-error *ngIf="isFieldInvalid('shortDescription')">{{
-        getErrorMessage("shortDescription")
+      <input matInput type="text" formControlName="kratakOpis" />
+      <mat-error *ngIf="isFieldInvalid('kratakOpis')">{{
+        getErrorMessage("kratakOpis")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Detaljan opis</mat-label>
-      <input matInput type="text" formControlName="longDescription" />
-      <mat-error *ngIf="isFieldInvalid('longDescription')">{{
-        getErrorMessage("longDescription")
+      <textarea matInput formControlName="detaljanOpis"></textarea>
+      <mat-error *ngIf="isFieldInvalid('detaljanOpis')">{{
+        getErrorMessage("detaljanOpis")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Cena</mat-label>
-      <input matInput type="number" formControlName="price" />
-      <mat-error *ngIf="isFieldInvalid('price')">{{
-        getErrorMessage("price")
+      <input matInput type="number" formControlName="cena" />
+      <span matTextSuffix>RSD</span>
+      <mat-error *ngIf="isFieldInvalid('cena')">{{
+        getErrorMessage("cena")
       }}</mat-error>
     </mat-form-field>
   </form>

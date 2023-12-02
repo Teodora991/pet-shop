@@ -5,18 +5,33 @@ body {
 }
 body {
   margin: 0;
-  font-family: "Arial", sans-serif; /* Choose a readable font */
-  font-size: 16px; /* Adjust the base font size */
-  line-height: 1.5; /* Set a comfortable line height */
-  color: #333; /* Choose a readable text color */
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+mat-card {
+  box-shadow: 3px 3px #4527a0, -1em 0 0.4em #d1c4e9 !important;
+}
+
+.mat-mdc-card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+  text-wrap: nowrap;
 }
 
 .mdc-card__actions {
   justify-content: space-around;
 }
 
+.mat-mdc-card-content {
+  height: 80px;
+  overflow: auto;
+}
+
 p {
-  margin-bottom: 1em; /* Add some space between paragraphs */
+  margin-bottom: 1em;
 }
 
 #container {
@@ -178,33 +193,4 @@ mat-form-field {
 .link {
   color: #7e57c2;
   font-weight: 600;
-}
-
-.user-details {
-  width: 60%;
-  margin: 0 auto;
-
-  .mat-mdc-card-header {
-    padding-bottom: 20px;
-    background-color: #651fff;
-    color: #ede7f6;
-  }
-
-  .mat-mdc-card-subtitle {
-    color: #ede7f6;
-  }
-
-  .mat-mdc-card-content {
-    padding: 16px;
-  }
-
-  .mat-divider {
-    margin: 5px 0;
-  }
-
-  .label {
-    font-size: 16px;
-    font-weight: 500;
-    color: #7e57c2;
-  }
 }

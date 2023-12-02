@@ -29,12 +29,12 @@ export class ProductItemSummaryComponent {
     private router: Router
   ) {}
   addToCart() {
-    if (!this.product.addedToCart)
+    if (!this.product.uKorpi)
       this.productService.addProductToCart(this.product.id);
   }
 
   removeFromCart() {
-    if (!this.product.addedToCart) return;
+    if (!this.product.uKorpi) return;
     this.dialogService
       .removeItemFromCartConfirmation()
       .afterClosed()

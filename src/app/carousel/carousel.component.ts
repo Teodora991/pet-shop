@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
@@ -12,8 +12,10 @@ interface Slide {
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
-export class CarouselComponent implements OnInit {
-  @Input() urls: string[] = [];
+export class CarouselComponent {
+  @Input() set urls(urls: string[]) {
+    this.slides = urls.map((url) => ({ img: url }));
+  }
 
   slides: Slide[] = [];
 
@@ -27,8 +29,4 @@ export class CarouselComponent implements OnInit {
     arrows: false,
     infinite: true,
   };
-
-  ngOnInit(): void {
-    this.slides = this.urls.map((url) => ({ img: url }));
-  }
 }

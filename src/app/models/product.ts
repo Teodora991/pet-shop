@@ -1,51 +1,51 @@
 export interface ProductSummary {
   id: number;
-  name: string;
-  images: string[];
-  shortDescription: string;
-  longDescription: string;
-  price: number;
-  type: string;
-  averageRating: number;
-  addedToCart: boolean;
-  ratings: number[];
+  naziv: string;
+  slike: string[];
+  kratakOpis: string;
+  detaljanOpis: string;
+  cena: number;
+  tip: string;
+  prosecnaOcena: number;
+  uKorpi: boolean;
+  ocene: number[];
 }
 
 export class Product implements ProductSummary {
   id: number;
-  name: string;
-  images: string[];
-  shortDescription: string;
-  longDescription: string;
-  price: number;
-  type: string;
-  averageRating: number;
-  addedToCart: boolean;
-  ratings: number[];
+  naziv: string;
+  slike: string[];
+  kratakOpis: string;
+  detaljanOpis: string;
+  cena: number;
+  tip: string;
+  prosecnaOcena: number;
+  uKorpi: boolean;
+  ocene: number[];
 
   constructor(
     options: {
       id?: number;
-      name?: string;
-      images?: string[];
-      shortDescription?: string;
-      longDescription?: string;
-      price?: number;
-      type?: string;
-      averageRating?: number;
-      addedToCart?: boolean;
-      ratings?: number[];
+      naziv?: string;
+      slike?: string[];
+      kratakOpis?: string;
+      detaljanOpis?: string;
+      cena?: number;
+      tip?: string;
+      prosecnaOcena?: number;
+      uKorpi?: boolean;
+      ocene?: number[];
     } = {}
   ) {
     this.id = options.id || Math.random();
-    this.name = options.name || '';
-    this.images = options.images || [];
-    this.shortDescription = options.shortDescription || '';
-    this.longDescription = options.longDescription || '';
-    this.price = options.price || 0;
-    this.type = options.type || '';
-    this.averageRating = options.averageRating || 0;
-    this.addedToCart = options.addedToCart || false;
-    this.ratings = options.ratings || [];
+    this.naziv = options.naziv || '';
+    this.slike = options.slike || [];
+    this.kratakOpis = options.kratakOpis || '';
+    this.detaljanOpis = options.detaljanOpis || '';
+    this.cena = options.cena || 0;
+    this.tip = options.tip || '';
+    this.prosecnaOcena = options.prosecnaOcena || 0;
+    this.uKorpi = options.uKorpi || false;
+    this.ocene = options.ocene || [];
   }
 }
