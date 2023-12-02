@@ -4,6 +4,8 @@ import { DialogService, ProductService } from '../../services';
 import { ProductItemSummaryComponent } from '../product-item-summary/product-item-summary.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-products-page',
@@ -13,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
     ProductItemSummaryComponent,
     MatGridListModule,
     MatButtonModule,
+    MatCardModule,
+    MatIconModule,
   ],
   templateUrl: './products-page.component.html',
   styleUrl: './products-page.component.scss',

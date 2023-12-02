@@ -12,7 +12,6 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { ProductService } from '../../services';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -47,7 +46,7 @@ export class ProductEditorComponent {
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {
     this.product = data.item || new Product();
-    this.title = data.title || 'Измена података о производу';
+    this.title = data.title || 'Izmena podataka o proizvodu';
     this.productFormGroup = this.fb.group({
       name: [this.product.name, [Validators.required]],
       type: [this.product.type, [Validators.required]],
@@ -63,7 +62,7 @@ export class ProductEditorComponent {
     if (!control || !control.touched) return '';
 
     if (control.hasError('required')) {
-      return 'Мораш унети вредност';
+      return 'Potrebno je uneti vrednost';
     }
 
     return '';

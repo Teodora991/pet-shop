@@ -1,10 +1,10 @@
 <div class="label-box">
   <h2>{{ userData.lastName }}, {{ userData.firstName }}</h2>
   <div>
-    <button mat-raised-button (click)="editUser()">Измени</button>
+    <button mat-raised-button (click)="editUser()">Izmeni</button>
   </div>
 </div>
-<div class="items-container user-details">
+<div class="user-details">
   <mat-card>
     <mat-card-header>
       <mat-card-title
@@ -15,12 +15,12 @@
 
     <mat-card-content>
       <p>
-        <span class="label">Датум рођења:</span>
+        <span class="label">Datum rođenja:</span>
         {{ userData.dateOfBirth | date : "MM/dd/yyyy" }}
       </p>
       <mat-divider></mat-divider>
-      <p><span class="label">Адреса:</span> {{ userData.address }}</p>
-      <p><span class="label">E-пошта:</span> {{ userData.email }}</p>
+      <p><span class="label">Adresa:</span> {{ userData.address }}</p>
+      <p><span class="label">E-pošta:</span> {{ userData.email }}</p>
     </mat-card-content>
   </mat-card>
 </div>

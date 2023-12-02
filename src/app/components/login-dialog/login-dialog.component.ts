@@ -50,7 +50,7 @@ export class LoginDialogComponent {
     if (!control || !control.touched) return '';
 
     if (control.hasError('required')) {
-      return 'Мораш унети вредност';
+      return 'Potrebno je uneti vrednost';
     }
     return '';
   }

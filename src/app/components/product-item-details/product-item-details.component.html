@@ -1,46 +1,42 @@
-<div class="label-box">
-  <h2>{{ productData.name }}</h2>
-  <div class="button-group">
-    <button mat-raised-button (click)="editProduct()">Измени</button>
-    <button mat-raised-button (click)="onDelete()">Избриши</button>
+<div class="buttons-container">
+  <div class="buttons">
+    <button mat-raised-button (click)="editProduct()">Izmeni</button>
+    <button mat-raised-button (click)="onDelete()">Izbriši</button>
   </div>
 </div>
-<div class="items-container">
-  <mat-grid-list cols="2" rowHeight="100%">
-    <mat-grid-tile
-      ><app-carousel [urls]="productData.images"></app-carousel
-    ></mat-grid-tile>
-    <mat-grid-tile
-      ><mat-card class="item-details">
-        <mat-card-header>
-          <mat-card-title>{{ productData.name }}</mat-card-title>
-          <mat-card-subtitle>{{ productData.type }}</mat-card-subtitle>
-          <mat-card-actions>
-            <button
-              mat-raised-button
-              (click)="addToCart()"
-              *ngIf="!productData.addedToCart"
-              color="primary"
-            >
-              <mat-icon>add_shopping_cart</mat-icon>Додај
-            </button>
-            <button mat-raised-button *ngIf="productData.addedToCart">
-              Додат у корпу
-            </button>
-          </mat-card-actions>
-        </mat-card-header>
-
-        <mat-card-content>
-          <mat-divider></mat-divider>
-          <p class="price">{{ productData.price | formatPrice }}</p>
-          <mat-divider></mat-divider>
-
-          <app-star-rating
-            [averageRating]="productData.averageRating"
-            [ratings]="productData.ratings"
-            (ratingUpdated)="updateProductRating($event)"
-          ></app-star-rating>
-        </mat-card-content> </mat-card
-    ></mat-grid-tile>
-  </mat-grid-list>
+<div class="row">
+  <div class="side">
+    <div class="box">
+      <app-carousel [urls]="productData.images"></app-carousel>
+      <div class="add-button">
+        <button
+          mat-raised-button
+          (click)="addToCart()"
+          *ngIf="!productData.addedToCart"
+          color="primary"
+        >
+          <mat-icon>add_shopping_cart</mat-icon>Dodaj u korpu
+        </button>
+        <button mat-raised-button *ngIf="productData.addedToCart">
+          Dodat u korpu
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="article-number">Broj Artikla: {{ productData.id }}</div>
+    <div class="title">{{ productData.name.toUpperCase() }}</div>
+    <p class="price">{{ productData.price }} RSD</p>
+    <p>
+      {{ productData.longDescription }}
+    </p>
+    <hr />
+    <div>Tip proizvoda: {{ productData.type }}</div>
+    <hr />
+    <app-star-rating
+      [averageRating]="productData.averageRating"
+      [ratings]="productData.ratings"
+      (ratingUpdated)="updateProductRating($event)"
+    ></app-star-rating>
+  </div>
 </div>

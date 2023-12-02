@@ -15,7 +15,7 @@ export class ProductService {
       ],
       shortDescription: 'Healthy pet food',
       longDescription:
-        'Nutritious and delicious pet food for your furry friend.',
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 10.99,
       type: 'Food',
       averageRating: 4.5,
@@ -30,7 +30,8 @@ export class ProductService {
         'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
       ],
       shortDescription: 'Interactive Pet Toy',
-      longDescription: 'Keep your pet entertained with this interactive toy.',
+      longDescription:
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 5.99,
       type: 'Toy',
       averageRating: 4.2,
@@ -45,7 +46,8 @@ export class ProductService {
         'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
       ],
       shortDescription: 'Comfortable Pet Bed',
-      longDescription: 'Provide your pet with a cozy place to rest and sleep.',
+      longDescription:
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 19.99,
       type: 'Accessory',
       averageRating: 4.7,
@@ -61,7 +63,7 @@ export class ProductService {
       ],
       shortDescription: 'Grooming Kit for Pets',
       longDescription:
-        'Essential grooming tools for keeping your pet clean and healthy.',
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 15.99,
       type: 'Grooming',
       averageRating: 4.0,
@@ -77,7 +79,7 @@ export class ProductService {
       ],
       shortDescription: 'Stylish Pet Collar',
       longDescription:
-        'Add a touch of style to your pet with this fashionable collar.',
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 8.99,
       type: 'Accessory',
       averageRating: 4.8,
@@ -94,7 +96,7 @@ export class ProductService {
       ],
       shortDescription: 'Durable Pet Leash',
       longDescription:
-        'A strong and durable leash for walking your pet with confidence.',
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 12.99,
       type: 'Accessory',
       averageRating: 4.6,
@@ -111,7 +113,8 @@ export class ProductService {
         'https://www.shutterstock.com/image-photo/arrangement-dogpet-toys-260nw-641512969.jpg',
       ],
       shortDescription: 'Delicious Pet Treats',
-      longDescription: 'Tasty treats to reward and spoil your pet.',
+      longDescription:
+        'Izrazito meke, plišane igračke raznih boja, koje služe kao jastuk ili igračka, postaće Vašem ljubimcu omiljena stvar koju će da nosi po kući. Dužina 30 cm, težina 7g.',
       price: 7.99,
       type: 'Treats',
       averageRating: 4.9,

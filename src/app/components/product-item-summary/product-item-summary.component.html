@@ -1,34 +1,31 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>{{ product.name }}</mat-card-title>
-    <mat-card-subtitle>{{ product.price }} RSD</mat-card-subtitle>
-  </mat-card-header>
-  <img
-    mat-card-image
-    [src]="product.images[0]"
-    alt="{{ product.shortDescription }}"
-  />
+    <mat-card-subtitle
+      >{{ product.price }} RSD</mat-card-subtitle
+    > </mat-card-header
+  ><br />
+  <img [src]="product.images[0]" alt="product.name" />
   <mat-card-content>
-    <p>
-      {{ product.shortDescription }}
-    </p>
+    <br />
+    <p>{{ product.shortDescription }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-button (click)="getProductDetails()">Више...</a>
+    <a mat-button (click)="getProductDetails()">Više...</a>
     <button
       mat-raised-button
       (click)="addToCart()"
       *ngIf="!product.addedToCart"
       color="primary"
     >
-      <mat-icon>add_shopping_cart</mat-icon>Додај
+      <mat-icon>add_shopping_cart</mat-icon>Dodaj
     </button>
     <button
       mat-raised-button
       (click)="removeFromCart()"
       *ngIf="product.addedToCart"
     >
-      <mat-icon>remove_shopping_cart</mat-icon>Уклони
+      <mat-icon>remove_shopping_cart</mat-icon>Ukloni
     </button>
   </mat-card-actions>
 </mat-card>

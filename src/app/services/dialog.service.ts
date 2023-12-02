@@ -42,8 +42,8 @@ export class DialogService {
       enterAnimationDuration: this.defaultEnterAnimationDuration,
       exitAnimationDuration: this.defaultExitAnimationDuration,
       data: {
-        title: 'Потврда уклањања производа',
-        message: 'Да ли сте сигурни да желите да уклоните производ из корпе?',
+        title: 'Potvrda uklanjanja proizvoda',
+        message: 'Da li ste sigurni da želite da uklonite proizvod iz korpe?',
       },
     });
   }
@@ -54,9 +54,9 @@ export class DialogService {
       enterAnimationDuration: this.defaultEnterAnimationDuration,
       exitAnimationDuration: this.defaultExitAnimationDuration,
       data: {
-        title: 'Потврда деактивације налога',
+        title: 'Potvrda deaktivacije naloga',
         message:
-          'Да ли сте сигурни да желите да деактивирате кориснички налог?',
+          'Da li ste sigurni da želite da deaktivirate korisnički nalog?',
       },
     });
   }
@@ -67,8 +67,8 @@ export class DialogService {
       enterAnimationDuration: this.defaultEnterAnimationDuration,
       exitAnimationDuration: this.defaultExitAnimationDuration,
       data: {
-        title: 'Потврда брисања производа',
-        message: 'Да ли сте сигурни да желите да избришете производ?',
+        title: 'Potvrda brisanja proizvoda',
+        message: 'Da li ste sigurni da želite da izbrišete proizvod?',
       },
     });
   }
@@ -88,7 +88,7 @@ export class DialogService {
         width: '500px',
         enterAnimationDuration: this.defaultEnterAnimationDuration,
         exitAnimationDuration: this.defaultExitAnimationDuration,
-        data: { creator: creator, title: 'Креирање корисничког налога' },
+        data: { creator: creator, title: 'Kreiranje korisničkog naloga' },
       })
       .afterClosed()
       .subscribe((user) => {
@@ -101,7 +101,7 @@ export class DialogService {
       width: '500px',
       enterAnimationDuration: this.defaultEnterAnimationDuration,
       exitAnimationDuration: this.defaultExitAnimationDuration,
-      data: { item: user, title: 'Измена података о кориснику' },
+      data: { item: user, title: 'Izmena podataka o korisniku' },
     });
   }
 
@@ -111,7 +111,7 @@ export class DialogService {
         width: '500px',
         enterAnimationDuration: this.defaultEnterAnimationDuration,
         exitAnimationDuration: this.defaultExitAnimationDuration,
-        data: { title: 'Додај производ' },
+        data: { title: 'Dodaj proizvod' },
       })
       .afterClosed()
       .subscribe((product) => {
@@ -124,7 +124,7 @@ export class DialogService {
       width: '500px',
       enterAnimationDuration: this.defaultEnterAnimationDuration,
       exitAnimationDuration: this.defaultExitAnimationDuration,
-      data: { item: product, title: 'Измена података о производу' },
+      data: { item: product, title: 'Izmena podataka o proizvodu' },
     });
   }
 }

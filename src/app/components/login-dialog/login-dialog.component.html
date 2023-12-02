@@ -1,15 +1,15 @@
-<h2 mat-dialog-title>Пријава корисника</h2>
+<h2 mat-dialog-title>Prijava korisnika</h2>
 <mat-dialog-content class="mat-typography">
   <form [formGroup]="loginFormGroup">
     <mat-form-field appearance="outline">
-      <mat-label>Корисничко име</mat-label>
+      <mat-label>Korisničko ime</mat-label>
       <input matInput formControlName="username" />
       <mat-error *ngIf="isFieldInvalid('username')">{{
         getErrorMessage("username")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Шифра</mat-label>
+      <mat-label>Šifra</mat-label>
       <input
         matInput
         formControlName="password"
@@ -32,20 +32,20 @@
 
   <div class="account-link">
     <p>
-      Немаш налог? Креирај га
-      <a (click)="signUp()"><span class="link">овде</span></a
+      Nemaš nalog? Kreiraj ga
+      <a (click)="signUp()"><span class="link">ovde</span></a
       >.
     </p>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button mat-dialog-close>Откажи</button>
+  <button mat-raised-button mat-dialog-close>Otkaži</button>
   <button
     mat-raised-button
     color="primary"
     (click)="onSubmit()"
     [disabled]="!isFormValid()"
   >
-    Потврди
+    Potvrdi
   </button>
 </mat-dialog-actions>

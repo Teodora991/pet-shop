@@ -1,29 +1,29 @@
 <div class="label-box">
   <h2>
-    Добродошли у {{ petShop().name }} – вашу дестинацију за квалитетну бригу о
-    љубимцима.
+    Dobrodošli u {{ petShop().name }} – vašu destinaciju za kvalitetnu brigu o
+    ljubimcima.
   </h2>
-  <button mat-raised-button (click)="editStore()">Измени</button>
+  <button mat-raised-button (click)="editStore()">Izmeni</button>
 </div>
-<div class="items-container">
+<div>
   <mat-dialog-content class="mat-typography about">
     <div class="section">
-      <h3>Наша прича</h3>
+      <h3>Naša priča</h3>
       <p>
-        Основани {{ petShop().yearOfOpening }}, у {{ petShop().name }} делимо
-        љубав према животињама.
+        Osnovani {{ petShop().yearOfOpening }}, u {{ petShop().name }} delimo
+        ljubav prema životinjama.
       </p>
       <p>
-        Наша мисија је побринути се да ваши љубимци воде срећан и здрав живот.
-        Пружамо пажљиво одабране производе и стручне савете како бисмо
-        унапредили добробит ваших љубимаца.
+        Naša misija je pobrinuti se da vaši ljubimci vode srećan i zdrav život.
+        Pružamo pažljivo odabrane proizvode i stručne savete kako bismo
+        unapredili dobrobit vaših ljubimaca.
       </p>
     </div>
     <div class="section">
-      <h3>Контакт</h3>
-      <p>Посетите нас данас на адреси {{ petShop().address }}</p>
-      <p>Захваљујемо се на указаном поверењу!</p>
-      <p>Тим {{ petShop().name }}</p>
+      <h3>Kontakt</h3>
+      <p>Posetite nas danas na adresi {{ petShop().address }}</p>
+      <p>Zahvaljujemo se na ukazanom poverenju!</p>
+      <p>Tim {{ petShop().name }}</p>
     </div>
   </mat-dialog-content>
 </div>

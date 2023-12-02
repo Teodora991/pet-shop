@@ -1,17 +1,10 @@
 <div class="label-box">
-  <h2>Производи</h2>
-  <button mat-raised-button (click)="addProduct()">+ Додај производ</button>
+  <h2>Proizvodi</h2>
+  <button mat-raised-button (click)="addProduct()">+ Dodaj proizvod</button>
 </div>
-<div class="items-container">
-  <mat-grid-list cols="4" rowHeight="1:1.2">
-    @for (product of products(); track product.id) {
-    <mat-grid-tile>
-      <app-product-item-summary
-        class="card"
-        [product]="product"
-      ></app-product-item-summary
-    ></mat-grid-tile>
 
-    } @empty { Empty list of products }
-  </mat-grid-list>
+<div class="responsive-grid">
+  @for (product of products(); track product.id) {
+  <app-product-item-summary [product]="product"></app-product-item-summary>
+  } @empty { Trenutno nema proizvoda. }
 </div>

@@ -1,29 +1,29 @@
-<h2 mat-dialog-title>Измена података о радњи</h2>
+<h2 mat-dialog-title>Izmena podataka o radnji</h2>
 <mat-dialog-content class="mat-typography">
   <form [formGroup]="storeFormGroup">
     <mat-form-field appearance="outline">
-      <mat-label>Назив</mat-label>
+      <mat-label>Naziv</mat-label>
       <input matInput type="text" formControlName="name" />
       <mat-error *ngIf="isFieldInvalid('name')">{{
         getErrorMessage("name")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Година отварања</mat-label>
+      <mat-label>Godina otvaranja</mat-label>
       <input matInput type="number" formControlName="yearOfOpening" />
       <mat-error *ngIf="isFieldInvalid('yearOfOpening')">{{
         getErrorMessage("yearOfOpening")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Седиште</mat-label>
+      <mat-label>Sedište</mat-label>
       <input type="text" matInput formControlName="address" />
       <mat-error *ngIf="isFieldInvalid('address')">{{
         getErrorMessage("address")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Лого </mat-label>
+      <mat-label>Logo</mat-label>
       <input matInput type="url" formControlName="logo" />
       <mat-error *ngIf="isFieldInvalid('logo')">{{
         getErrorMessage("logo")
@@ -32,13 +32,13 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button mat-dialog-close>Откажи</button>
+  <button mat-raised-button mat-dialog-close>Otkaži</button>
   <button
     mat-raised-button
     color="primary"
     (click)="onSubmit()"
     [disabled]="!isFormValid()"
   >
-    Потврди
+    Potvrdi
   </button>
 </mat-dialog-actions>

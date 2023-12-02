@@ -1,24 +1,24 @@
 <div class="label-box">
-  <h2>Корисници</h2>
-  <button mat-raised-button (click)="addUser()">+ Додај корисника</button>
+  <h2>Korisnici</h2>
+  <button mat-raised-button (click)="addUser()">+ Dodaj korisnika</button>
 </div>
 
-<div class="items-container">
-  <table mat-table [dataSource]="users()" class="mat-elevation-z8 demo-table">
+<div>
+  <table mat-table [dataSource]="users()" class="mat-elevation-z8 users-grid">
     <ng-container matColumnDef="username">
-      <th mat-header-cell *matHeaderCellDef>Корисничко име</th>
+      <th mat-header-cell *matHeaderCellDef>Korisničko ime</th>
       <td mat-cell *matCellDef="let element">{{ element.username }}</td>
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Име</th>
+      <th mat-header-cell *matHeaderCellDef>Ime</th>
       <td mat-cell *matCellDef="let element">
         {{ element.lastName }}, {{ element.firstName }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef>Е-пошта</th>
+      <th mat-header-cell *matHeaderCellDef>Е-pošta</th>
       <td mat-cell *matCellDef="let element">{{ element.email }}</td>
     </ng-container>
 
@@ -30,7 +30,7 @@
           mat-raised-button
           (click)="deactivateUser(element)"
         >
-          Деактивирај
+          Deaktiviraj
         </button>
       </td>
     </ng-container>

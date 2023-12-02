@@ -3,16 +3,16 @@
   <mat-stepper orientation="horizontal" #stepper [linear]="true">
     <mat-step [stepControl]="accountFormGroup">
       <form [formGroup]="accountFormGroup">
-        <ng-template matStepLabel>Подаци о налогу</ng-template>
+        <ng-template matStepLabel>Podaci o nalogu</ng-template>
         <mat-form-field appearance="outline">
-          <mat-label>Корисничко име</mat-label>
+          <mat-label>Korisničko ime</mat-label>
           <input type="text" matInput formControlName="username" />
           <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'username')">{{
             getErrorMessage(accountFormGroup, "username")
           }}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Шифра</mat-label>
+          <mat-label>Šifra</mat-label>
           <input
             matInput
             formControlName="password"
@@ -35,7 +35,7 @@
         </mat-form-field>
 
         <mat-form-field *ngIf="!data.item" appearance="outline" class="">
-          <mat-label>Потврда Шифре</mat-label>
+          <mat-label>Potvrda Šifre</mat-label>
           <input
             matInput
             formControlName="confirmPassword"
@@ -60,22 +60,22 @@
           >
         </mat-form-field>
         <mat-dialog-actions align="end">
-          <button mat-raised-button mat-dialog-close>Откажи</button>
+          <button mat-raised-button mat-dialog-close>Otkaži</button>
           <button
             mat-raised-button
             matStepperNext
             [disabled]="!isFormValid(accountFormGroup)"
           >
-            Следеће
+            Sledeće
           </button>
         </mat-dialog-actions>
       </form>
     </mat-step>
     <mat-step [stepControl]="userFormGroup">
       <form [formGroup]="userFormGroup">
-        <ng-template matStepLabel>Подаци о кориснику</ng-template>
+        <ng-template matStepLabel>Podaci o korisniku</ng-template>
         <mat-form-field appearance="outline">
-          <mat-label>Име</mat-label>
+          <mat-label>Ime</mat-label>
           <input matInput type="text" formControlName="firstName" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'firstName')">{{
             getErrorMessage(userFormGroup, "firstName")
@@ -83,7 +83,7 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Презиме</mat-label>
+          <mat-label>Prezime</mat-label>
           <input matInput type="text" formControlName="lastName" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'lastName')">{{
             getErrorMessage(userFormGroup, "lastName")
@@ -91,7 +91,7 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Адреса</mat-label>
+          <mat-label>Adresa</mat-label>
           <input matInput type="text" formControlName="address" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'address')">{{
             getErrorMessage(userFormGroup, "address")
@@ -99,28 +99,28 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Адреса електронске поште</mat-label>
+          <mat-label>E-pošta</mat-label>
           <input matInput type="email" formControlName="email" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'email')">{{
             getErrorMessage(userFormGroup, "email")
           }}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Датум рођења</mat-label>
+          <mat-label>Datum Rođenja</mat-label>
           <input matInput type="date" formControlName="dateOfBirth" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'dateOfBirth')">{{
             getErrorMessage(userFormGroup, "dateOfBirth")
           }}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Број Телефона</mat-label>
+          <mat-label>Broj Telefona</mat-label>
           <input matInput type="tel" formControlName="phoneNumber" />
           <mat-error *ngIf="isFieldInvalid(userFormGroup, 'phoneNumber')">{{
             getErrorMessage(userFormGroup, "phoneNumber")
           }}</mat-error>
         </mat-form-field>
         <mat-dialog-actions align="end">
-          <button mat-raised-button matStepperPrevious>Претходно</button>
+          <button mat-raised-button matStepperPrevious>Prethodno</button>
           <button
             mat-raised-button
             type="button"
@@ -128,7 +128,7 @@
             (click)="onSubmit()"
             [disabled]="!isFormValid(userFormGroup)"
           >
-            Потврди
+            Potvrdi
           </button>
         </mat-dialog-actions>
       </form>
@@ -140,8 +140,8 @@
     *ngIf="this.data.creator === 'user' && !this.data.item"
   >
     <p>
-      Већ имаш налог? Пријави се
-      <a (click)="login()"><span class="link">овде</span></a
+      Već imaš nalog? Prijavi se
+      <a (click)="login()"><span class="link">ovde</span></a
       >.
     </p>
   </div>

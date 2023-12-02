@@ -87,14 +87,14 @@ export class AccountEditorComponent {
     if (!control || !control.touched) return '';
 
     if (control.hasError('required')) {
-      return 'Ово поље је обавезно.';
+      return 'Ovo polje je obavezno.';
     }
     if (control.hasError('email')) {
-      return 'Неисправан формат е-поште.';
+      return 'Neispravan format e-pošte.';
     }
 
     if (control.hasError('passwordMatch')) {
-      return 'Унете шифре нису идентичне.';
+      return 'Unete šifre nisu identične.';
     }
 
     return '';

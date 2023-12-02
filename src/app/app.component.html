@@ -1,11 +1,8 @@
-<mat-grid-list class="flex-container" cols="1">
-  <mat-grid-tile-header id="header">
-    <app-navigation-bar></app-navigation-bar>
-  </mat-grid-tile-header>
-  <mat-grid-tile id="main-content" [ngClass]="{ overlay: checkOverlay() }">
-    <app-main-content></app-main-content>
-  </mat-grid-tile>
-  <mat-grid-tile-footer id="footer">
-    <app-footer></app-footer>
-  </mat-grid-tile-footer>
-</mat-grid-list>
+<div id="container" class="flex-container">
+  <app-navigation-bar id="navbar"></app-navigation-bar>
+  <app-main-content
+    id="main"
+    [ngClass]="{ overlay: checkOverlay() }"
+  ></app-main-content>
+  <app-footer id="footer"></app-footer>
+</div>

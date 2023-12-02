@@ -2,42 +2,42 @@
 <mat-dialog-content class="mat-typography">
   <form [formGroup]="productFormGroup">
     <mat-form-field appearance="outline">
-      <mat-label>Назив</mat-label>
+      <mat-label>Naziv</mat-label>
       <input matInput type="text" formControlName="name" />
       <mat-error *ngIf="isFieldInvalid('name')">{{
         getErrorMessage("name")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Врста</mat-label>
+      <mat-label>Vrsta</mat-label>
       <input matInput type="text" formControlName="type" />
       <mat-error *ngIf="isFieldInvalid('type')">{{
         getErrorMessage("type")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Слика</mat-label>
+      <mat-label>Slika</mat-label>
       <input matInput type="url" formControlName="img" />
       <mat-error *ngIf="isFieldInvalid('img')">{{
         getErrorMessage("img")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Кратак опис</mat-label>
+      <mat-label>Kratak opis</mat-label>
       <input matInput type="text" formControlName="shortDescription" />
       <mat-error *ngIf="isFieldInvalid('shortDescription')">{{
         getErrorMessage("shortDescription")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Детаљан опис</mat-label>
+      <mat-label>Detaljan opis</mat-label>
       <input matInput type="text" formControlName="longDescription" />
       <mat-error *ngIf="isFieldInvalid('longDescription')">{{
         getErrorMessage("longDescription")
       }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Цена</mat-label>
+      <mat-label>Cena</mat-label>
       <input matInput type="number" formControlName="price" />
       <mat-error *ngIf="isFieldInvalid('price')">{{
         getErrorMessage("price")
@@ -46,13 +46,13 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button mat-dialog-close>Откажи</button>
+  <button mat-raised-button mat-dialog-close>Otkaži</button>
   <button
     mat-raised-button
     color="primary"
     (click)="onSubmit()"
     [disabled]="!isFormValid()"
   >
-    Потврди
+    Potvrdi
   </button>
 </mat-dialog-actions>

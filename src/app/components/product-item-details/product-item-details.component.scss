@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 0 0 auto;
+  background-color: white;
+  padding-right: 20px;
+}
+
+.main {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+}
+
+.box {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-number {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.price {
+  font-size: 20px;
+  color: #7e57c2;
+}
+
+.title {
+  font-size: 25px;
+  color: #673ab7;
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}

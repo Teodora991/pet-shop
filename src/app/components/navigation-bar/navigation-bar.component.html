@@ -11,26 +11,26 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="about">О Нама</button>
-    <button mat-menu-item routerLink="products">Производи</button>
-    <button mat-menu-item routerLink="users">Корисници</button>
+    <button mat-menu-item routerLink="about">O Nama</button>
+    <button mat-menu-item routerLink="products">Proizvodi</button>
+    <button mat-menu-item routerLink="users">Korisnici</button>
   </mat-menu>
 
   <nav>
-    <a mat-button routerLink="about" routerLinkActive="active">О Нама</a>
+    <a mat-button routerLink="about" routerLinkActive="active">O Nama</a>
     <a
       mat-button
       routerLink="products"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >Производи</a
+      >Proizvodi</a
     >
     <a
       mat-button
       routerLink="users"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >Корисници</a
+      >Korisnici</a
     >
   </nav>
 
@@ -50,5 +50,5 @@
       >shopping_cart</mat-icon
     >
   </a>
-  <button mat-raised-button (click)="onLogin()">Пријави се</button>
+  <button mat-raised-button (click)="onLogin()">Prijavi se</button>
 </mat-toolbar>

@@ -5,9 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DialogService, ProductService } from '../../services';
 import { Product, ProductSummary } from '../../models';
-import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { FormatPricePipe } from '../../pipes/format-price.pipe';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
@@ -19,9 +16,6 @@ import { CarouselComponent } from '../../carousel/carousel.component';
   imports: [
     CommonModule,
     MatButtonModule,
-    MatCardModule,
-    MatGridListModule,
-    MatDividerModule,
     MatIconModule,
     FormatPricePipe,
     StarRatingComponent,

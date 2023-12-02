@@ -1,26 +1,21 @@
 <div class="label-box">
-  <h2>Корпа</h2>
+  <h2>Vaša Korpa</h2>
   <div class="account-link">
-    <p>Укупно у корпи: {{ productService.total() | formatPrice }}</p>
+    <p>Ukupno u korpi: {{ productService.total() | formatPrice }}</p>
   </div>
 </div>
 
-<div class="items-container">
-  <mat-grid-list cols="4" rowHeight="1:1.2">
+<div>
+  <div class="responsive-grid">
     @for (product of productService.cartItems(); track product.id) {
-    <mat-grid-tile>
-      <app-product-item-summary
-        class="card"
-        [product]="product"
-      ></app-product-item-summary
-    ></mat-grid-tile>
+    <app-product-item-summary [product]="product"></app-product-item-summary>
     } @empty {
     <div class="account-link">
-      <p>Ваша корпа је празна...</p>
+      <p>Vaša korpa je prazna...</p>
       <button mat-raised-button color="primary" [routerLink]="['/products']">
-        Пронађи производе
+        Pronađi proizvode
       </button>
     </div>
     }
-  </mat-grid-list>
+  </div>
 </div>
