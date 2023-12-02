@@ -21,6 +21,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { passwordMatchValidator } from '../../validators/passwords-match.validator';
 import { DialogService } from '../../services';
 import { DialogData } from '../../models/dialog-data';
+import { addressFormatValidator } from '../../validators/address-format.validator';
 
 @Component({
   selector: 'app-account-editor',
@@ -70,7 +71,10 @@ export class AccountEditorComponent {
       firstName: [data?.item?.firstName || '', [Validators.required]],
       lastName: [data?.item?.lastName || '', [Validators.required]],
       phoneNumber: [data?.item?.phoneNumber || '', [Validators.required]],
-      address: [data?.item?.address || '', [Validators.required]],
+      address: [
+        data?.item?.address || '',
+        [Validators.required, addressFormatValidator],
+      ],
       dateOfBirth: [data?.item?.dateOfBirth || null, [Validators.required]],
       email: [data?.item?.email || '', [Validators.required, Validators.email]],
     });
@@ -95,6 +99,10 @@ export class AccountEditorComponent {
 
     if (control.hasError('passwordMatch')) {
       return 'Unete šifre nisu identične.';
+    }
+
+    if (control.hasError('invalidAddressFormat')) {
+      return 'Adresa mora biti u formatu: ulica i br, mesto, poštanski br.';
     }
 
     return '';

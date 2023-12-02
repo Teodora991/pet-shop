@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { PetShopService } from '../../services';
+import { addressFormatValidator } from '../../validators/address-format.validator';
 
 @Component({
   selector: 'app-store-editor',
@@ -43,7 +44,10 @@ export class StoreEditorComponent {
         this.petShopService.petShop().yearOfOpening,
         [Validators.required],
       ],
-      address: [this.petShopService.petShop().address, [Validators.required]],
+      address: [
+        this.petShopService.petShop().address,
+        [Validators.required, addressFormatValidator],
+      ],
       logo: [this.petShopService.petShop().logo, [Validators.required]],
     });
   }
@@ -54,6 +58,9 @@ export class StoreEditorComponent {
 
     if (control.hasError('required')) {
       return 'Potrebno je uneti vrednost';
+    }
+    if (control.hasError('invalidAddressFormat')) {
+      return 'Adresa mora biti u formatu: ulica i br, mesto, poštanski br.';
     }
     return '';
   }
