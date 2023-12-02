@@ -1,26 +1,35 @@
-<div class="label-box">
-  <h2>{{ userData.lastName }}, {{ userData.firstName }}</h2>
+<div class="buttons-container">
   <div>
     <button mat-raised-button (click)="editUser()">Izmeni</button>
   </div>
 </div>
-<div class="user-details">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title
-        >{{ userData.lastName }}, {{ userData.firstName }}</mat-card-title
-      >
-      <mat-card-subtitle>{{ userData.username }}</mat-card-subtitle>
-    </mat-card-header>
+<div class="row">
+  <div class="side">
+    <h1>{{ userData.prezime }}, {{ userData.ime }}</h1>
+    <div class="contact">
+      <h3>Podaci o Nalogu</h3>
+      <p>
+        <span class="label">Korisničko ime:</span> {{ userData.korisnickoIme }}
+      </p>
+      <p><span class="label">Lozinka:</span> {{ userData.lozinka }}</p>
+    </div>
+  </div>
+  <div class="main">
+    <div class="details-box">
+      <h3>Lični Podaci</h3>
+      <p><span class="label">Ime:</span> {{ userData.ime }}</p>
+      <p><span class="label">Prezime:</span> {{ userData.prezime }}</p>
 
-    <mat-card-content>
       <p>
         <span class="label">Datum rođenja:</span>
-        {{ userData.dateOfBirth | date : "MM/dd/yyyy" }}
+        {{ userData.datumRodjenja | date : "MM/dd/yyyy" }}
       </p>
-      <mat-divider></mat-divider>
-      <p><span class="label">Adresa:</span> {{ userData.address }}</p>
+    </div>
+    <div class="details-box">
+      <h3>Kontakt Podaci</h3>
+      <p><span class="label">Adresa:</span> {{ userData.adresa }}</p>
       <p><span class="label">E-pošta:</span> {{ userData.email }}</p>
-    </mat-card-content>
-  </mat-card>
+      <p><span class="label">Telefon:</span> {{ userData.telefon }}</p>
+    </div>
+  </div>
 </div>

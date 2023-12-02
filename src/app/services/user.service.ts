@@ -7,104 +7,54 @@ import { User } from '../models';
 export class UserService {
   mockData: User[] = [
     new User({
-      username: 'user1',
-      password: 'password1',
-      email: 'user1@email.com',
-      firstName: 'User',
-      lastName: 'One',
-      dateOfBirth: '1994-10-22',
-      address: 'Address 1',
-      phoneNumber: '123-456-7890',
+      korisnickoIme: 'petar',
+      lozinka: 'petar123',
+      email: 'ppetrovic@webd.com',
+      ime: 'Petar',
+      prezime: 'Petrovic',
+      datumRodjenja: '1994-10-22',
+      adresa: 'Gogoljeva 39, Novi Sad,21000',
+      telefon: '061-456-456',
     }),
     new User({
-      username: 'user2',
-      password: 'password2',
-      email: 'user2@email.com',
-      firstName: 'User',
-      lastName: 'Two',
-      dateOfBirth: '1990-02-02',
-      address: 'Address 2',
-      phoneNumber: '123-456-7890',
+      korisnickoIme: 'jovana',
+      lozinka: 'jovana123',
+      email: 'jjovanovic@webd.com',
+      ime: 'Jovana',
+      prezime: 'Jovanovic',
+      datumRodjenja: '1982-05-05',
+      adresa: 'Jug Bogdana 14, Zrenjanin,350902',
+      telefon: '062-321-4321',
     }),
     new User({
-      username: 'user3',
-      password: 'password3',
-      email: 'user3@email.com',
-      firstName: 'User',
-      lastName: 'Three',
-      dateOfBirth: '1990-03-03',
-      address: 'Address 3',
-      phoneNumber: '123-456-7890',
+      korisnickoIme: 'filip',
+      lozinka: 'filip123',
+      email: 'ffilipovic@webd.com',
+      ime: 'Filip',
+      prezime: 'Filipovic',
+      datumRodjenja: '1973-03-10',
+      adresa: 'Solunska 5, Novi Sad, 21000',
+      telefon: '064-1459-159',
     }),
     new User({
-      username: 'user4',
-      password: 'password4',
-      email: 'user4@email.com',
-      firstName: 'User',
-      lastName: 'Four',
-      dateOfBirth: '1990-04-04',
-      address: 'Address 4',
-      phoneNumber: '123-456-7890',
+      korisnickoIme: 'marko',
+      lozinka: 'marko123',
+      email: 'mmarkovic@webd.com',
+      ime: 'Marko',
+      prezime: 'Markovic',
+      datumRodjenja: '1990-09-17',
+      adresa: 'Cara Lazara 9a, Beograd,11000',
+      telefon: '063-876-7876',
     }),
     new User({
-      username: 'user5',
-      password: 'password5',
-      email: 'user5@email.com',
-      firstName: 'User',
-      lastName: 'Five',
-      dateOfBirth: '1990-05-05',
-      address: 'Address 5',
-      phoneNumber: '123-456-7890',
-    }),
-    new User({
-      username: 'user6',
-      password: 'password6',
-      email: 'user6@email.com',
-      firstName: 'User',
-      lastName: 'Six',
-      dateOfBirth: '1990-06-06',
-      address: 'Address 6',
-      phoneNumber: '123-456-7890',
-    }),
-    new User({
-      username: 'user7',
-      password: 'password7',
-      email: 'user7@email.com',
-      firstName: 'User',
-      lastName: 'Seven',
-      dateOfBirth: '1990-07-07',
-      address: 'Address 7',
-      phoneNumber: '123-456-7890',
-    }),
-    new User({
-      username: 'user8',
-      password: 'password8',
-      email: 'user8@email.com',
-      firstName: 'User',
-      lastName: 'Eight',
-      dateOfBirth: '1990-08-08',
-      address: 'Address 8',
-      phoneNumber: '123-456-7890',
-    }),
-    new User({
-      username: 'user9',
-      password: 'password9',
-      email: 'user9@email.com',
-      firstName: 'User',
-      lastName: 'Nine',
-      dateOfBirth: '1990-09-09',
-      address: 'Address 9',
-      phoneNumber: '123-456-7890',
-    }),
-    new User({
-      username: 'user10',
-      password: 'password10',
-      email: 'user10@email.com',
-      firstName: 'User',
-      lastName: 'Ten',
-      dateOfBirth: '1990-10-10',
-      address: 'Address 10',
-      phoneNumber: '123-456-7890',
+      korisnickoIme: 'tijana',
+      lozinka: 'tijana123',
+      email: 'ttijanic@webd.com',
+      ime: 'Tijana',
+      prezime: 'Tijanic',
+      datumRodjenja: '1998-06-29',
+      adresa: 'Ružićeva 32, Zrenjanin, 350902',
+      telefon: '065-753-753',
     }),
   ];
 
@@ -115,19 +65,19 @@ export class UserService {
   deleteUser(username?: string) {
     if (!username) return;
     this.users.update((users) =>
-      users.filter((user) => user.username !== username)
+      users.filter((user) => user.korisnickoIme !== username)
     );
   }
 
   addUser(user: User) {
-    if (!user?.username) return;
+    if (!user?.korisnickoIme) return;
     this.users.update((users) => [user, ...users]);
   }
 
   editUser(username: string, updatedUser: User) {
     if (!username) return;
     const updatedUsers = this.users().map((user) => {
-      if (user.username === username) {
+      if (user.korisnickoIme === username) {
         return { ...updatedUser };
       }
       return user;
@@ -137,6 +87,6 @@ export class UserService {
 
   getUserByUsername(username?: string) {
     if (!username) return;
-    return this.users().find((user) => user.username === username);
+    return this.users().find((user) => user.korisnickoIme === username);
   }
 }

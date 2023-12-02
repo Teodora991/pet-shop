@@ -55,27 +55,30 @@ export class AccountEditorComponent {
   ) {
     this.accountFormGroup = data.item
       ? this.fb.group({
-          username: [data?.item?.username || '', [Validators.required]],
-          password: [data?.item?.password || '', [Validators.required]],
+          korisnickoIme: [
+            data?.item?.korisnickoIme || '',
+            [Validators.required],
+          ],
+          lozinka: [data?.item?.lozinka || '', [Validators.required]],
         })
       : this.fb.group(
           {
-            username: ['', [Validators.required]],
-            password: ['', [Validators.required]],
-            confirmPassword: ['', [Validators.required]],
+            korisnickoIme: ['', [Validators.required]],
+            lozinka: ['', [Validators.required]],
+            potvrdiLozinku: ['', [Validators.required]],
           },
           { validators: passwordMatchValidator }
         );
 
     this.userFormGroup = this.fb.group({
-      firstName: [data?.item?.firstName || '', [Validators.required]],
-      lastName: [data?.item?.lastName || '', [Validators.required]],
-      phoneNumber: [data?.item?.phoneNumber || '', [Validators.required]],
-      address: [
-        data?.item?.address || '',
+      ime: [data?.item?.ime || '', [Validators.required]],
+      prezime: [data?.item?.prezime || '', [Validators.required]],
+      telefon: [data?.item?.telefon || '', [Validators.required]],
+      adresa: [
+        data?.item?.adresa || '',
         [Validators.required, addressFormatValidator],
       ],
-      dateOfBirth: [data?.item?.dateOfBirth || null, [Validators.required]],
+      datumRodjenja: [data?.item?.datumRodjenja || null, [Validators.required]],
       email: [data?.item?.email || '', [Validators.required, Validators.email]],
     });
   }
@@ -98,7 +101,7 @@ export class AccountEditorComponent {
     }
 
     if (control.hasError('passwordMatch')) {
-      return 'Unete šifre nisu identične.';
+      return 'Unete lozinke nisu identične.';
     }
 
     if (control.hasError('invalidAddressFormat')) {

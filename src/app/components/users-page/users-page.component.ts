@@ -28,7 +28,7 @@ export class UsersPageComponent {
       .afterClosed()
       .subscribe((isConfirmed: boolean) => {
         if (!isConfirmed) return;
-        this.userService.deleteUser(user.username);
+        this.userService.deleteUser(user.korisnickoIme);
       });
   }
 
@@ -37,6 +37,6 @@ export class UsersPageComponent {
   }
 
   onRowDoubleClick(data: User) {
-    this.router.navigate(['/users', data.username]);
+    this.router.navigate(['/users', data.korisnickoIme]);
   }
 }

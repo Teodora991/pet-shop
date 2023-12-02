@@ -7,13 +7,13 @@
   <table mat-table [dataSource]="users()" class="mat-elevation-z8 users-grid">
     <ng-container matColumnDef="username">
       <th mat-header-cell *matHeaderCellDef>Korisničko ime</th>
-      <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.korisnickoIme }}</td>
     </ng-container>
 
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Ime</th>
       <td mat-cell *matCellDef="let element">
-        {{ element.lastName }}, {{ element.firstName }}
+        {{ element.prezime }}, {{ element.ime }}
       </td>
     </ng-container>
 

@@ -6,16 +6,17 @@
         <ng-template matStepLabel>Podaci o nalogu</ng-template>
         <mat-form-field appearance="outline">
           <mat-label>Korisničko ime</mat-label>
-          <input type="text" matInput formControlName="username" />
-          <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'username')">{{
-            getErrorMessage(accountFormGroup, "username")
-          }}</mat-error>
+          <input type="text" matInput formControlName="korisnickoIme" />
+          <mat-error
+            *ngIf="isFieldInvalid(accountFormGroup, 'korisnickoIme')"
+            >{{ getErrorMessage(accountFormGroup, "korisnickoIme") }}</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Šifra</mat-label>
+          <mat-label>Lozinka</mat-label>
           <input
             matInput
-            formControlName="password"
+            formControlName="lozinka"
             [type]="hidePassword ? 'password' : 'text'"
           />
           <button
@@ -29,16 +30,16 @@
               hidePassword ? "visibility_off" : "visibility"
             }}</mat-icon>
           </button>
-          <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'password')">{{
-            getErrorMessage(accountFormGroup, "password")
+          <mat-error *ngIf="isFieldInvalid(accountFormGroup, 'lozinka')">{{
+            getErrorMessage(accountFormGroup, "lozinka")
           }}</mat-error>
         </mat-form-field>
 
         <mat-form-field *ngIf="!data.item" appearance="outline" class="">
-          <mat-label>Potvrda Šifre</mat-label>
+          <mat-label>Potvrda Lozinke</mat-label>
           <input
             matInput
-            formControlName="confirmPassword"
+            formControlName="potvrdiLozinku"
             [type]="hideConfirmPassword ? 'password' : 'text'"
           />
           <button
@@ -53,9 +54,9 @@
             }}</mat-icon>
           </button>
           <mat-error
-            *ngIf="isFieldInvalid(accountFormGroup, 'confirmPassword')"
+            *ngIf="isFieldInvalid(accountFormGroup, 'potvrdiLozinku')"
             >{{
-              getErrorMessage(accountFormGroup, "confirmPassword")
+              getErrorMessage(accountFormGroup, "potvrdiLozinku")
             }}</mat-error
           >
         </mat-form-field>
@@ -76,25 +77,25 @@
         <ng-template matStepLabel>Podaci o korisniku</ng-template>
         <mat-form-field appearance="outline">
           <mat-label>Ime</mat-label>
-          <input matInput type="text" formControlName="firstName" />
-          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'firstName')">{{
-            getErrorMessage(userFormGroup, "firstName")
+          <input matInput type="text" formControlName="ime" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'ime')">{{
+            getErrorMessage(userFormGroup, "ime")
           }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Prezime</mat-label>
-          <input matInput type="text" formControlName="lastName" />
-          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'lastName')">{{
-            getErrorMessage(userFormGroup, "lastName")
+          <input matInput type="text" formControlName="prezime" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'prezime')">{{
+            getErrorMessage(userFormGroup, "prezime")
           }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Adresa</mat-label>
-          <input matInput type="text" formControlName="address" />
-          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'address')">{{
-            getErrorMessage(userFormGroup, "address")
+          <input matInput type="text" formControlName="adresa" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'adresa')">{{
+            getErrorMessage(userFormGroup, "adresa")
           }}</mat-error>
         </mat-form-field>
 
@@ -107,16 +108,16 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Datum Rođenja</mat-label>
-          <input matInput type="date" formControlName="dateOfBirth" />
-          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'dateOfBirth')">{{
-            getErrorMessage(userFormGroup, "dateOfBirth")
+          <input matInput type="date" formControlName="datumRodjenja" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'datumRodjenja')">{{
+            getErrorMessage(userFormGroup, "datumRodjenja")
           }}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Broj Telefona</mat-label>
-          <input matInput type="tel" formControlName="phoneNumber" />
-          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'phoneNumber')">{{
-            getErrorMessage(userFormGroup, "phoneNumber")
+          <input matInput type="tel" formControlName="telefon" />
+          <mat-error *ngIf="isFieldInvalid(userFormGroup, 'telefon')">{{
+            getErrorMessage(userFormGroup, "telefon")
           }}</mat-error>
         </mat-form-field>
         <mat-dialog-actions align="end">

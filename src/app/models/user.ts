@@ -1,45 +1,43 @@
 export interface UserSummary {
-  username: string;
-  password: string;
+  korisnickoIme: string;
+  lozinka: string;
   email: string;
-  firstName: string;
-  lastName: string;
-  dateOfBirth?: string;
-  address: string;
-  phoneNumber: string;
+  ime: string;
+  prezime: string;
+  datumRodjenja?: string;
+  adresa: string;
+  telefon: string;
 }
 
 export class User implements UserSummary {
-  // Properties
-  username: string;
-  password: string;
+  korisnickoIme: string;
+  lozinka: string;
   email: string;
-  firstName: string;
-  lastName: string;
-  dateOfBirth?: string;
-  address: string;
-  phoneNumber: string;
+  ime: string;
+  prezime: string;
+  datumRodjenja?: string;
+  adresa: string;
+  telefon: string;
 
-  // Constructor
   constructor(
     options: {
-      username?: string;
-      password?: string;
+      korisnickoIme?: string;
+      lozinka?: string;
       email?: string;
-      firstName?: string;
-      lastName?: string;
-      dateOfBirth?: string;
-      address?: string;
-      phoneNumber?: string;
+      ime?: string;
+      prezime?: string;
+      datumRodjenja?: string;
+      adresa?: string;
+      telefon?: string;
     } = {}
   ) {
-    this.username = options.username || '';
-    this.password = options.password || '';
+    this.korisnickoIme = options.korisnickoIme || '';
+    this.lozinka = options.lozinka || '';
     this.email = options.email || '';
-    this.firstName = options.firstName || '';
-    this.lastName = options.lastName || '';
-    this.dateOfBirth = options.dateOfBirth || undefined;
-    this.address = options.address || '';
-    this.phoneNumber = options.phoneNumber || '';
+    this.ime = options.ime || '';
+    this.prezime = options.prezime || '';
+    this.datumRodjenja = options.datumRodjenja || undefined;
+    this.adresa = options.adresa || '';
+    this.telefon = options.telefon || '';
   }
 }

@@ -48,9 +48,9 @@ export class UserDetailsComponent {
       .afterClosed()
       .subscribe((user: User) => {
         if (!user) return;
-        this.userService.editUser(this.userData.username, user);
+        this.userService.editUser(this.userData.korisnickoIme, user);
         this.userData =
-          this.userService.getUserByUsername(user.username) || new User();
+          this.userService.getUserByUsername(user.korisnickoIme) || new User();
       });
   }
 }
